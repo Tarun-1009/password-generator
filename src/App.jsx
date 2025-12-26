@@ -6,23 +6,28 @@ function App() {
     <div className="App">
       <h1>Password Generator</h1>
       <p1>Generate secure passwords easily!</p1>
-      <div>
-        <div>
+      <div className='password-container'>
+        <div className='password-display'>
           <input type="text" ></input>
           <button>⟳</button>
         </div>
         <button>Copy Password</button>
       </div>
-      <div>
         <label>Password Length</label>
-        <input type="number" min="4" max="20" />
-      </div>
-      <input type="slider" min="6" max="100" />
-      <input type="checkbox" />Uppercase
-      <input type="checkbox" />Lowercase
-      <input type="checkbox" />Numbers
-      <input type="checkbox" />Symbols
-    </div>
+      <input type="range" min="6" max="100" />
+      <label className='checkbox'>
+      Uppercase<input type="checkbox" />
+      </label>
+      <label className='checkbox'>
+      Lowercase<input type="checkbox" />
+      </label>
+      <label className='checkbox'>
+      Numbers<input type="checkbox" />
+      </label>
+      <label className='checkbox'>
+      Symbols<input type="checkbox" />
+      </label>
+  </div>
   )
 }
 export default App
