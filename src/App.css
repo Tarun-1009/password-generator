@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(66, 146, 158);
+    border-radius: 0px;
 }
 .App {
     text-align: center;
@@ -30,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 .password-display{
@@ -46,9 +48,12 @@
     border: none;
     width: 80px;
     height: 40px;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
+    background-color: rgb(66, 146, 158);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 .password-display input{
     border: none;
@@ -64,9 +69,31 @@
     cursor: pointer;
     background-color: white;
 }
+.length{
+    width: 400px;
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+}
+input[type="range"]{
+    width: 400px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .checkbox{
     width: 400px;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+    cursor: pointer;
+}
+.checkbox input{
+    cursor:pointer;
+    width: 18px;
+}
+input[type="checkbox"]:checked{
+    accent-color: rgb(66, 146, 158);
+}
+input[type="range"]{
+    accent-color: rgb(66, 146, 158);
 }
