@@ -51,9 +51,9 @@ function App() {
       <div className='password-container'>
         <div className='password-display'>
           <input type="text" value={password} ref={passwordRef}></input>
-          <button onClick={generatePassword}>⟳</button>
+          <button className="reload" onClick={generatePassword}>⟳</button>
         </div>
-        <button onClick={copyPassword}>Copy</button>
+        <button className="copy-button" onClick={copyPassword}>Copy</button>
       </div>
       <div className='length'> 
         <label>Password Length : {length}</label>

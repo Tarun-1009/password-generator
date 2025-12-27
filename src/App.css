@@ -44,7 +44,7 @@
     margin-right: 10px;
 
 }
-.password-container button{
+.copy-button{
     border: none;
     width: 80px;
     height: 40px;
@@ -54,10 +54,10 @@
     background-color: rgb(66, 146, 158);
     font-weight: bold;
     color: rgb(0, 0, 0);
-}
-.password-container button:hover{
+}  
+.copy-button:hover{
     background-color: rgb(100, 180, 190);
-}    
+}
 .password-display input{
     border: none;
     width: 270px;
@@ -65,13 +65,17 @@
     font-size: 18px;
     margin-left: 15px;
 }
-.password-display button{
+.reload{
     border: none;
     width: 40px;
     height: 35px;
     font-size: 28px;
     cursor: pointer;
     background-color: white;
+}
+.reload:hover{
+    color: rgb(66, 146, 158);
+    background-color: rgba(230, 230, 230, 0.342);
 }
 .length{
     width: 400px;
