@@ -1,6 +1,6 @@
 import './App.css'
 import lock from './assets/lock.png'
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect,useRef } from 'react'
 
 
 function App() {
@@ -10,6 +10,9 @@ function App() {
   const [lowercase,setlowercase]=useState(true)
   const [numbers,setnumbers]=useState(false)
   const [symbols,setsymbols]=useState(false)
+  const passwordRef= useRef(null)
+
+
   const generatePassword= useCallback(() => {
     if(!uppercase && !lowercase && !numbers && !symbols){
       setPassowd('')
@@ -27,9 +30,19 @@ function App() {
     }
     setPassowd(password)
   },[length,uppercase,lowercase,numbers,symbols])
+
+
+
   useEffect(() => {
     generatePassword();
   }, [length,uppercase,lowercase,numbers,symbols])
+
+
+  const copyPassword = useCallback (() => {
+    passwordRef.current.select();
+    document.Clipboard.writeText(password);
+  },[])
+
   return (
     <div className="App">
       <img src={lock} width="100" height="100"/>
@@ -37,10 +50,10 @@ function App() {
       <p>Generate secure passwords easily!</p>
       <div className='password-container'>
         <div className='password-display'>
-          <input type="text" value={password}></input>
+          <input type="text" value={password} ref={passwordRef}></input>
           <button onClick={generatePassword}>⟳</button>
         </div>
-        <button>Copy</button>
+        <button onClick={copyPassword}>Copy</button>
       </div>
       <div className='length'> 
         <label>Password Length : {length}</label>
